@@ -12,8 +12,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: ls -la
-      shell: bash
+    - uses: action/checkout@v4
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
     - id: random-number-generator
